@@ -96,6 +96,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#reincforcement-module">Reincforcement Module</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#python-path-cheat-sheet">Python Path Cheat Sheet</a><ul>
+  <li class="toctree-l3"><a class="reference internal" href="#tods-data-processing">tods.data_processing</a></li>
+  <li class="toctree-l3"><a class="reference internal" href="#tods-timeseries-processing">tods.timeseries_processing</a></li>
+  <li class="toctree-l3"><a class="reference internal" href="#tods-feature-analysis">tods.feature_analysis</a></li>
+  <li class="toctree-l3"><a class="reference internal" href="#tods-detection-algorithms">tods.detection_algorithm</a></li>
+  <li class="toctree-l3"><a class="reference internal" href="#tods-reincforcement-module">tods.reinforcement</a></li>
+  </ul>
+  </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
@@ -193,10 +201,13 @@ TODS provides three pervasive outlier scenarios for the given time series data.<
 <div class="section" id="data-processing">
 <h3>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline">¶</a></h3>
 <p>Data processing aims on processing data following the tabular fashion. The functionalities including: dataset loading, data filtering, data validation, data binarization, and timestamp transformation.</p>
+
+  
 </div>
 <div class="section" id="timeseries-processing">
 <h3>Timeseries Processing<a class="headerlink" href="#timeseries-processing" title="Permalink to this headline">¶</a></h3>
 <p>Time series processing provides multiple time series-specific preprocessing techniques including: seasonality/trend decomposition, time series transformation/scaling/smoothing.</p>
+</div>
 </div>
 <div class="section" id="feature-analysis">
 <h3>Feature Analysis<a class="headerlink" href="#feature-analysis" title="Permalink to this headline">¶</a></h3>
@@ -210,6 +221,343 @@ There are 30 feature extraction methods including statistical methods, time seri
 <div class="section" id="reincforcement-module">
 <h3>Reincforcement Module<a class="headerlink" href="#reincforcement-module" title="Permalink to this headline">¶</a></h3>
 <p>Reinforcement module is designed for improve the existed model with human expertise. Specifically, rule-based filtering has been developed to allow users to transform the domain knowledge into rule filters, active learning based methods will be involved in the near future as well.</p>
+</div>
+
+
+
+
+<div class="section" id="python-path-cheat-sheet">
+  <h2>Python Path Cheat Sheet<a class="headerlink" href="#python-path-cheat-sheet" title="Permalink to this headline">¶</a></h2>
+
+  <div class="section" id="tods-data-processing">
+  <h3>tods.data_processing<a class="headerlink" href="#tods-data-processing" title="Permalink to this headline">¶</a></h3>
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+    </colgroup>
+    <thead>
+    <tr class="row-odd"><th class="head"><p>Python Path</p></th>
+    <th class="head"><p>Primitive</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row-even"><td><p><strong>tods.data_processing.dataset_to_dataframe</strong></p></td>
+    <td><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-datasettodataframe">tods.data_processing.DatasetToDataframe</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.data_processing.time_interval_transform</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-timeintervaltransform">tods.data_processing.TimeIntervalTransform</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.data_processing.categorical_to_binary</strong></p></td>
+    <td><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-categoricaltobinary">tods.data_processing.CategoricalToBinary</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.data_processing.column_filter</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-columnfilter">tods.data_processing.ColumnFilter</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.data_processing.timestamp_validation</strong></p></td>
+    <td><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-datasettodataframe">tods.data_processing.DatasetToDataframe</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.data_processing.duplication_validation</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-duplicationvalidation">tods.data_processing.DuplicationValidation</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.data_processing.continuity_validation</strong></p></td>
+    <td><p><a class="reference internal" href="tods.data_processing.html#tods-data-processing-continuityvalidation">tods.data_processing.ContinuityValidation</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.data_processing.impute_missing</strong></p></td>
+    <td colspan="3"><p></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.data_processing.column_parser</strong></p></td>
+      <td><p></p></td>
+      </tr>
+      <tr class="row-odd"><td><p><strong>tods.data_processing.extract_columns_by_semantic_types</strong></p></td>
+      <td colspan="3"><p></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.data_processing.construct_predictions</strong></p></td>
+      <td><p></p></td>
+      </tr>         
+            
+    </tbody>
+    </table>
+  </div>
+
+  <div class="section" id="tods-timeseries-processing">
+  <h3>tods.timeseries_processing<a class="headerlink" href="#tods-timeseries-processing" title="Permalink to this headline">¶</a></h3>
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+    </colgroup>
+    <thead>
+    <tr class="row-odd"><th class="head"><p>Python Path</p></th>
+    <th class="head"><p>Primitive</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row-odd"><td><p><strong>tods.timeseries_processing.axiswise_scaler</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-skaxiswisescaler">tods.timeseries_processing.SKAxiswiseScaler</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.timeseries_processing.standard_scaler</strong></p></td>
+    <td><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-skstandardscaler">tods.timeseries_processing.SKStandardScaler</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.timeseries_processing.power_transformer</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-skpowertransformer">tods.timeseries_processing.SKPowerTransformer</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.timeseries_processing.quantile_transformer</strong></p></td>
+    <td><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-skquantiletransformer">tods.timeseries_processing.SKQuantileTransformer</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.timeseries_processing.moving_average_transform</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-movingaveragetransform">tods.timeseries_processing.MovingAverageTransform</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.timeseries_processing.simple_exponential_smoothing</strong></p></td>
+    <td><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-simpleexponentialsmoothing">tods.timeseries_processing.SimpleExponentialSmoothing</a></p></td>
+    </tr>         
+    <tr class="row-odd"><td><p><strong>tods.timeseries_processing.holt_smoothing</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-holtsmoothing">tods.timeseries_processing.HoltSmoothing</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.timeseries_processing.holt_winters_exponential_smoothing</strong></p></td>
+    <td><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-holtwintersexponentialsmoothing">tods.timeseries_processing.HoltWintersExponentialSmoothing</a></p></td>
+    </tr>  
+    <tr class="row-odd"><td><p><strong>tods.timeseries_processing.time_series_seasonality_trend_decomposition</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.timeseries_processing.html#tods-timeseries-processing-timeseriesseasonalitytrenddecomposition">tods.timeseries_processing.TimeSeriesSeasonalityTrendDecomposition</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.timeseries_processing.subsequence_segmentation</strong></p></td>
+    <td><p></p></td>
+    </tr>                 
+                    
+                           
+    </tbody>
+    </table>
+  </div>
+  </div>
+  <div class="section" id="tods-feature-analysis">
+  <h3>tods.feature_analysis<a class="headerlink" href="#tods-feature-analysis" title="Permalink to this headline">¶</a></h3>
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+    </colgroup>
+    <thead>
+    <tr class="row-odd"><th class="head"><p>Python Path</p></th>
+    <th class="head"><p>Primitive</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.auto_correlation</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-autocorrelation">tods.feature_analysis.AutoCorrelation</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_mean</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmean">tods.feature_analysis.StatisticalMean</a></p></td>
+    </tr>
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_median</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmedian">tods.feature_analysis.StatisticalMedian</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_g_mean</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalgmean">tods.feature_analysis.StatisticalGmean</a></p></td>
+    </tr>         
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_abs_energy</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalabsenergy">tods.feature_analysis.StatisticalAbsEnergy</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_abs_sum</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalabssum">tods.feature_analysis.StatisticalAbsSum</a></p></td>
+    </tr>  
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_h_mean</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalhmean">tods.feature_analysis.StatisticalHmean</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_maximum</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmaximum">tods.feature_analysis.StatisticalMaximum</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_minimum</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalminimum">tods.feature_analysis.StatisticalMinimum</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_mean_abs</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmeanabs">tods.feature_analysis.StatisticalMeanAbs</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_mean_abs_temporal_derivative</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmeanabstemporalderivative">tods.feature_analysis.StatisticalMeanAbsTemporalDerivative</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_mean_temporal_derivative</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmeantemporalderivative">tods.feature_analysis.StatisticalMeanTemporalDerivative</a></p></td>
+      </tr>                 
+                             
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_median_abs_deviation</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalmedianabsolutedeviation">tods.feature_analysis.StatisticalMedianAbsoluteDeviation</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_kurtosis</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalkurtosis">tods.feature_analysis.StatisticalKurtosis</a></p></td>
+    </tr>                 
+                               
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_skew</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalskew">tods.feature_analysis.StatisticalSkew</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_std</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalstd">tods.feature_analysis.StatisticalStd</a></p></td>
+    </tr>                 
+                                 
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_var</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalvar">tods.feature_analysis.StatisticalVar</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_variation</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalvariation">tods.feature_analysis.StatisticalVariation</a></p></td>
+    </tr>                
+                             
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_vec_sum</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalvecsum">tods.feature_analysis.StatisticalVecSum</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.statistical_willison_amplitude</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalwillisonamplitude">tods.feature_analysis.StatisticalWillisonAmplitude</a></p></td>
+    </tr>                 
+                             
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.statistical_zero_crossing</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-statisticalzerocrossing">tods.feature_analysis.StatisticalZeroCrossing</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.spectral_residual_transform</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-spectralresidualtransform">tods.feature_analysis.SpectralResidualTransform</a></p></td>
+    </tr>                 
+                             
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.fast_fourier_transform</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-fastfouriertransform">tods.feature_analysis.FastFourierTransform</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.discrete_cosine_transform</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-discretecosinetransform">tods.feature_analysis.DiscreteCosineTransform</a></p></td>
+    </tr>                 
+                             
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.non_negative_matrix_factorization</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-nonnegativematrixfactorization">tods.feature_analysis.NonNegativeMatrixFactorization</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.bk_filter</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-bkfilter">tods.feature_analysis.BKFilter</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.hp_filter</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-hpfilter">tods.feature_analysis.HPFilter</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.truncated_svd</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-sktruncatedsvd">tods.feature_analysis.SKTruncatedSVD</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.feature_analysis.wavelet_transform</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-wavelettransform">tods.feature_analysis.WaveletTransform</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.feature_analysis.trmf</strong></p></td>
+    <td><p><a class="reference internal" href="tods.feature_analysis.html#tods-feature-analysis-trmf">tods.feature_analysis.TRMF</a></p></td>
+    </tr>                 
+                                              
+                                   
+                                            
+    </tbody>
+    </table>
+  </div>
+  <div class="section" id="tods-detection-algorithms">
+  <h3>tods.detection_algorithm<a class="headerlink" href="#tods-detection-algorithms" title="Permalink to this headline">¶</a></h3>
+  
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+    </colgroup>
+    <thead>
+    <tr class="row-odd"><th class="head"><p>Python Path</p></th>
+    <th class="head"><p>Primitive</p></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.AutoRegODetector</strong></p></td>
+    <td  colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-autoregodetect">tods.detection_algorithm.AutoRegODetect</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.dagmm</strong></p></td>
+      <td colspan="3"><p></p></td>
+      </tr>
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.deeplog</strong></p></td>
+    <td  colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-deeplog">tods.detection_algorithm.DeepLog</a></p></td>
+    </tr>
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.Ensemble</strong></p></td>
+      <td colspan="3"><p></p></td>
+      </tr> 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.KDiscordODetector</strong></p></td>
+    <td  colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-kdiscordodetect">tods.detection_algorithm.KDiscordODetect</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.LSTMODetector</strong></p></td>
+    <td  colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-lstmodetect">tods.detection_algorithm.LSTMODetect</a></p></td>
+    </tr>         
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.matrix_profile</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-matrixprofile">tods.detection_algorithm.MatrixProfile</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.PCAODetector</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pcaodetect">tods.detection_algorithm.PCAODetect</a></p></td>
+    </tr>  
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_abod</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodabod">tods.detection_algorithm.PyodABOD</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_ae</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodae">tods.detection_algorithm.PyodAE</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_cblof</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodcblof">tods.detection_algorithm.PyodCBLOF</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_cof</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodcof">tods.detection_algorithm.PyodCOF</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_hbos</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodhbos">tods.detection_algorithm.PyodHBOS</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_iforest</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodisolationforest">tods.detection_algorithm.PyodIsolationForest</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_knn</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodknn">tods.detection_algorithm.PyodKNN</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_loda</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodloda">tods.detection_algorithm.PyodLODA</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_lof</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodlof">tods.detection_algorithm.PyodLOF</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_mogaal</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodmogaal">tods.detection_algorithm.PyodMoGaal</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_ocsvm</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodocsvm">tods.detection_algorithm.PyodOCSVM</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_sod</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodsod">tods.detection_algorithm.PyodSOD</a></p></td>
+    </tr>                 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.pyod_sogaal</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodsogaal">tods.detection_algorithm.PyodSoGaal</a></p></td>
+    </tr>    
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.pyod_vae</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-pyodvae">tods.detection_algorithm.PyodVAE</a></p></td>
+    </tr> 
+    <tr class="row-odd"><td><p><strong>tods.detection_algorithm.system_wise_detection</strong></p></td>
+      <td colspan="3"><p></p></td>
+      </tr>                 
+    <tr class="row-even"><td><p><strong>tods.detection_algorithm.telemanom</strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-telemanom">tods.detection_algorithm.Telemanom</a></p></td>
+    </tr>    
+    <tr class="row-odd"><td><p><strong></strong></p></td>
+    <td colspan="3"><p><a class="reference internal" href="tods.detection_algorithm.html#tods-detection-algorithm-uodbaseprimitive">tods.detection_algorithm.UODBasePrimitive</a></p></td>
+    </tr>       
+  
+                             
+    </tbody>
+    </table>
+    </div>
+  <div class="section" id="tods-reincforcement-module">
+  <h3>tods.reinforcement<a class="headerlink" href="#tods-reincforcement-module" title="Permalink to this headline">¶</a></h3>
+  <table class="docutils align-default">
+    <colgroup>
+    <col style="width: 50%">
+    <col style="width: 50%">
+    </colgroup>
+    <thead>
+    <tr class="row-odd"><th class="head"><p>Python Path</p></th>
+    <th class="head"><p>Primitive</p></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="row-even"><td><p><strong>tods.reinforcement.rule_filter</strong></p></td>
+    <td><p><a class="reference internal" href="tods.reinforcement.html#tods-reinforcement-rulebasedfilter">tods.reinforcement.RuleBasedFilter</a></p></td>
+    </tr>
+    </tbody>
+    </table>
 </div>
 </div>
 </div>
